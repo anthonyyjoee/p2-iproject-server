@@ -19,6 +19,9 @@ router.get('/posts', FeatureController.getPost)
 
 router.post('/create-checkout-session', stripejs);
 
+router.patch('/addbalance', FeatureController.addBalance)
+
+
 router.use(errorHandler)
 
 module.exports = router

@@ -33,6 +33,20 @@ class FeatureController {
       next(err)
     }
   }
+
+  static async addBalance(req, res, next) {
+    try {
+      const { userId } = req.body
+      await User.increment({balance: 10000}, { where: { id: userId } })
+
+      res.status(200).json({
+        message: "Payment complete"
+      })
+    } catch (err) {
+      console.log(err);
+      next(err)
+    }
+  }
 }
 
 module.exports = { FeatureController }
