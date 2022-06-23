@@ -13,6 +13,9 @@ router.use(authentication)
 
 router.post('/postmusic', FeatureController.uploadMusic)
 
+router.get('/posts', FeatureController.getPost)
+
+
 router.use(errorHandler)
 
 module.exports = router
