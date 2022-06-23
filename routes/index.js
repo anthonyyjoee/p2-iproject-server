@@ -6,6 +6,9 @@ const router = require('express').Router()
 
 router.post('/register', UserController.postRegister)
 
+router.post('/login', UserController.login)
+
+
 router.use(errorHandler)
 
 module.exports = router
